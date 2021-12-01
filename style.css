@@ -1,4 +1,7 @@
+/*Импорт шрифта*/
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+/*Основные свойства*/
 body {
 	background-color: #252427; /* Цвет фона */
 	margin: 0;
@@ -7,6 +10,8 @@ body {
 	font-size: 16px;
 	color: #E3E3E3;
 }
+
+/*Свойства для ссылок*/
 a {
 	color: #E3E3E3;
 	text-decoration: none;
@@ -17,8 +22,8 @@ a:visited {
 a:hover {
 	color: cyan;
 }
+
 .container {
-	display: flex;
 	height: 100px;
 }
 header {
@@ -37,7 +42,9 @@ ul {
 	display: flex;
 }
 li {
-	display: inline-block;
+	display: inline;
+	height: 50px;
+	align: center;
 }
 .logo {
 	display: block;
