@@ -1,5 +1,22 @@
-/*Импорт шрифта*/
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+/*Заметки
+Внутри navbar элементы перестают быть в строчку при ширине менее n
+Придумать способ добавить горизонтальную черту - нормальной высоты
+
+
+
+
+
+
+
+
+
+
+*/
+
+
+
+
+
 
 /*Основные свойства*/
 body {
@@ -17,10 +34,10 @@ a {
 	text-decoration: none;
 }
 a:visited {
-	color: lightblue;
+	color: #E3E3E3;
 }
 a:hover {
-	color: cyan;
+	color: #037769;
 }
 
 .container {
@@ -31,7 +48,7 @@ header {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    background-color: rgba(0,0,0,0.59);
+    /*background-color: rgba(0,0,0,0.59);*/
     width: 80%;
     position: absolute;
     color: white;
@@ -39,15 +56,41 @@ header {
     border-bottom: 1px solid #858585;
 }
 ul {
-	display: flex;
+	margin: 0;
+	align-items: center;
 }
 li {
 	display: inline;
-	height: 50px;
-	align: center;
+	padding-right: 40px;
+	padding-left: 0;
+
+}
+.topmenu li:nth-child(5) {
+	padding-right: 0;
+	border-right: 1px solid #858585;
+	margin-right: 40px;
 }
 .logo {
-	display: block;
 	width: 167px;
 	height: 100px;
 }
+
+
+
+
+
+
+
+.container1 {
+	padding-left: 10%;
+	padding-right: 10%;
+}
+.container1 h1 {
+	font-family: Inter, sans-serif;
+	font-weight: 500;
+	font-size: 63px;
+	line-height: 76px;
+	padding-top: 14px;
+
+}
+
