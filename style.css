@@ -1,66 +1,46 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
-
-* {
-	box-sizing: border-box;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+body {
+	background-color: #252427; /* Цвет фона */
 	margin: 0;
-	padding: 0;
-	background-color: #24252A;
-}
-
-
-li, a , button {
-	font-family: "Montserrat", sans-serif;
-	font-weight: 500;
+	font-family: 'Roboto', sans-serif;
+	font-variant: normal;
 	font-size: 16px;
-	color: #edf0f1;
+	color: #E3E3E3;
+}
+a {
+	color: #E3E3E3;
 	text-decoration: none;
 }
-
-
+a:visited {
+	color: lightblue;
+}
+a:hover {
+	color: cyan;
+}
+.container {
+	display: flex;
+	height: 100px;
+}
 header {
-	display: flex; /*Включает flex-верстку блоков*/
-	justify-content: space-between;
-	align-items: center;
-	padding: 30px 10%;
+	display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(0,0,0,0.59);
+    width: 80%;
+    position: absolute;
+    color: white;
+    margin: 0 10%;
+    border-bottom: 1px solid #858585;
 }
-
-
-.logo {
-	cursor: pointer; /*Превращает курсор в курсор, как над ссылкой при наведении на лого*/
+ul {
+	display: flex;
 }
-
-
-.nav_links {
-	list-style: none;
-}
-
-
-.nav_links li {
+li {
 	display: inline-block;
-	padding: 0px 20px;
 }
-
-
-.nav_links li a {
-	transition: all 0.3s ease 0s;
-}
-
-
-.nav_links li a:hover {
-	color: #0088a9;
-}
-
-
-button {
-	padding: 9px 25px;
-	background-color: rgba(0,136,169,1);
-	border: none;
-	border-radius: 50px;
-	cursor: pointer;
-	transition: all 0.3s ease 0s;
-}
-
-
-button:hover {
-	background-color: rgba(0,136,169,0.8);
+.logo {
+	display: block;
+	width: 167px;
+	height: 100px;
 }
