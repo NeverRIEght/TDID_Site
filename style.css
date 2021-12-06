@@ -17,12 +17,12 @@
 
 
 
-
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
 /*Основные свойства*/
 body {
 	background-color: #252427; /* Цвет фона */
 	margin: 0;
-	font-family: 'Roboto', sans-serif;
+	font-family: Inter, sans-serif;
 	font-variant: normal;
 	font-size: 16px;
 	color: #E3E3E3;
@@ -37,7 +37,7 @@ a:visited {
 	color: #E3E3E3;
 }
 a:hover {
-	color: #037769;
+	color: #64D8CA;
 }
 
 .container {
@@ -51,7 +51,7 @@ header {
     /*background-color: rgba(0,0,0,0.59);*/
     width: 80%;
     position: absolute;
-    color: white;
+    color: #E3E3E3;
     margin: 0 10%;
     border-bottom: 1px solid #858585;
 }
@@ -86,11 +86,66 @@ li {
 	padding-right: 10%;
 }
 .container1 h1 {
-	font-family: Inter, sans-serif;
+	font-family: Inter;
+	font-style: normal;
 	font-weight: 500;
 	font-size: 63px;
-	line-height: 76px;
+	line-height: 120%;
 	padding-top: 14px;
 
 }
+.container1 h2 {
+	font-family: Inter;
+	font-style: normal;
+	font-weight: 300;
+	font-size: 19px;
+	line-height: 140%;
+	margin-bottom: 160px;
+}
+.button {
+	display: inline-block;
+	width: 205px;
+	height: 50px;
+	background-color: #037769;
+	color: #FFFFFF;
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+	vertical-align: middle;
+	border: 2px solid #037769;
+}
+.button:hover {
+	border: 2px solid #B7F0E9;
+	color: #FFFFFF;
+}
 
+
+main {
+	padding-left: 10%;
+	padding-right: 10%;
+	font-family: Inter;
+}
+main h3 {
+	font-family: Inter;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 63px;
+	line-height: 120%;
+}
+
+
+/*Градиент на фоне*/
+main div:nth-child(odd) {
+	background-color: #252427;
+	color: #FFFFFF;
+	font-size: 50px;
+	Font style: Medium;
+	Line height: 70px;
+}
+main div:nth-child(even) {
+	background-color: #FFFFFF;
+	color: #000000;
+	font-size: 50px;
+	Font style: Medium;
+	Line height: 70px;
+}
