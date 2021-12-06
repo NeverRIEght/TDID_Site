@@ -2,23 +2,14 @@
 Внутри navbar элементы перестают быть в строчку при ширине менее n
 Придумать способ добавить горизонтальную черту - нормальной высоты
 
-
-
-
-
-
-
-
-
-
 */
 
 
-
+/*-------------------------------------------------- Основные свойства --------------------------------------------------*/
 
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
-/*Основные свойства*/
+
 body {
 	background-color: #252427; /* Цвет фона */
 	margin: 0;
@@ -28,7 +19,10 @@ body {
 	color: #E3E3E3;
 }
 
-/*Свойства для ссылок*/
+
+/*-------------------------------------------------- Свойства для ссылок --------------------------------------------------*/
+
+
 a {
 	color: #E3E3E3;
 	text-decoration: none;
@@ -40,8 +34,51 @@ a:hover {
 	color: #64D8CA;
 }
 
+
+/*-------------------------------------------------- Свойства для кнопок --------------------------------------------------*/
+
+
+.button {
+	display: inline-block;
+	width: 205px;
+	height: 50px;
+	background-color: #037769;
+	color: #FFFFFF;
+	text-align: center;
+	border: 2px solid #037769;
+}
+.button:hover {
+	border: 2px solid #B7F0E9;
+	color: #FFFFFF;
+}
+
+
+/*-------------------------------------------------- Фон сайта (тёмный-светлый) --------------------------------------------------*/
+
+
+main div:nth-child(odd) {
+	background-color: #252427;
+	color: #FFFFFF;
+	font-size: 50px;
+	Font style: Medium;
+	Line height: 70px;
+}
+main div:nth-child(even) {
+	background-color: #FFFFFF;
+	color: #000000;
+	font-size: 50px;
+	Font style: Medium;
+	Line height: 70px;
+}
+
+
+/*-------------------------------------------------- Свойства Navbar`а --------------------------------------------------*/
+
+
 .container {
 	height: 100px;
+	margin: 0;
+	padding: 0;
 }
 header {
 	display: flex;
@@ -76,12 +113,11 @@ li {
 }
 
 
-
-
-
+/*-------------------------------------------------- Свойства заголовка сайта --------------------------------------------------*/
 
 
 .container1 {
+	margin-top: 0;
 	padding-left: 10%;
 	padding-right: 10%;
 }
@@ -91,7 +127,6 @@ li {
 	font-weight: 500;
 	font-size: 63px;
 	line-height: 120%;
-	padding-top: 14px;
 
 }
 .container1 h2 {
@@ -102,22 +137,8 @@ li {
 	line-height: 140%;
 	margin-bottom: 160px;
 }
-.button {
-	display: inline-block;
-	width: 205px;
-	height: 50px;
-	background-color: #037769;
-	color: #FFFFFF;
-	text-align: center;
-	align-items: center;
-	justify-content: center;
-	vertical-align: middle;
-	border: 2px solid #037769;
-}
-.button:hover {
-	border: 2px solid #B7F0E9;
-	color: #FFFFFF;
-}
+
+/*-------------------------------------------------- Основные разделы --------------------------------------------------*/
 
 
 main {
@@ -132,20 +153,8 @@ main h3 {
 	font-size: 63px;
 	line-height: 120%;
 }
-
-
-/*Градиент на фоне*/
-main div:nth-child(odd) {
-	background-color: #252427;
-	color: #FFFFFF;
-	font-size: 50px;
-	Font style: Medium;
-	Line height: 70px;
-}
-main div:nth-child(even) {
-	background-color: #FFFFFF;
-	color: #000000;
-	font-size: 50px;
-	Font style: Medium;
-	Line height: 70px;
+.hor {
+	margin: 0;
+	padding: 0;
+	border-bottom: 1px solid #858585;
 }
