@@ -59,16 +59,24 @@ a:hover {
 main div:nth-child(odd) {
 	background-color: #252427;
 	color: #FFFFFF;
-	font-size: 50px;
 	Font style: Medium;
-	Line height: 70px;
+}
+main .hor:nth-child(odd) {
+	margin: 0;
+	padding: 0;
+	border-bottom: 1px solid #1858585;
+	margin-bottom: 80px;
 }
 main div:nth-child(even) {
 	background-color: #FFFFFF;
 	color: #000000;
-	font-size: 50px;
 	Font style: Medium;
-	Line height: 70px;
+}
+main .hor:nth-child(even) {
+	margin: 0;
+	padding: 0;
+	border-bottom: 1px solid #858585;
+	margin-bottom: 80px;
 }
 
 
@@ -150,13 +158,55 @@ main h3 {
 	font-family: Inter;
 	font-style: normal;
 	font-weight: 500;
-	font-size: 63px;
-	line-height: 120%;
-	margin-top: 120px;
+	font-size: 50px;
+	line-height: normal;
+	margin-top: 0;
+	padding-top: 120px;
+	margin-bottom: 10px;
 }
-.hor {
-	margin: 0;
-	padding: 0;
-	border-bottom: 1px solid #858585;
+
+
+/*-------------------------------------------------- "О нас" --------------------------------------------------*/
+
+
+#about p {
+	font-size: 20px;
+	margin-top: 0;
+	margin-bottom: 60px;
+}
+
+#about div {
+	background-color: #252427;
+	color: #FFFFFF;
+}
+
+#about .about_blocks {
+	display: flex;
+	justify-content: space-between;
+}
+#about .about_blocks div {
+	background: #252427;
+	border-top: 4px solid #037769;
+	padding-top: 10px;
+	
+}
+#about .about_blocks p {
+	font-size: 18px;
+	font-weight: 300;
 	margin-bottom: 80px;
 }
+#about .lastp {
+	margin-top: 80px;               /*Заменить на last-child*/
+	margin-bottom: 135px;
+}
+
+
+/*#about .about_lines {
+	display: flex;
+	justify-content: space-between;
+}
+
+#about .about_lines div{
+	background: #252427;
+	border-top: 4px solid #037769;
+}*/
