@@ -56,27 +56,41 @@ a:hover {
 /*-------------------------------------------------- Фон сайта (тёмный-светлый) --------------------------------------------------*/
 
 
-main div:nth-child(odd) {
+/*main div:nth-child(odd) {
 	background-color: #252427;
 	color: #FFFFFF;
 	Font style: Medium;
-}
+}*/
 main .hor:nth-child(odd) {
 	margin: 0;
 	padding: 0;
 	border-bottom: 1px solid #1858585;
 	margin-bottom: 80px;
 }
-main div:nth-child(even) {
+/*main div:nth-child(even) {
 	background-color: #FFFFFF;
 	color: #000000;
 	Font style: Medium;
-}
+}*/
 main .hor:nth-child(even) {
 	margin: 0;
 	padding: 0;
 	border-bottom: 1px solid #858585;
 	margin-bottom: 80px;
+}
+
+
+main .containers {
+	padding-left: 120px;
+	padding-right: 120px;
+}
+main .containers:nth-child(odd) {
+	background-color: #252427;
+	color: #FFFFFF;
+}
+main .containers:nth-child(even) {
+	background-color: #FFFFFF;
+	color: #000000;
 }
 
 
@@ -86,7 +100,12 @@ main .hor:nth-child(even) {
 .container {
 	height: 100px;
 	margin: 0;
-	padding: 0;
+	padding-top: 0;
+	padding-bottom: 0;
+}
+.logo {
+	width: 167px;
+	height: 99px;
 }
 header {
 	display: flex;
@@ -95,6 +114,7 @@ header {
     justify-content: space-between;
     /*background-color: rgba(0,0,0,0.59);*/
     width: 80%;
+    height: 100px;
     position: absolute;
     color: #E3E3E3;
     margin: 0 10%;
@@ -103,6 +123,7 @@ header {
 ul {
 	margin: 0;
 	align-items: center;
+	padding-left: 0;
 }
 li {
 	display: inline;
@@ -114,10 +135,6 @@ li {
 	padding-right: 0;
 	border-right: 1px solid #858585;
 	margin-right: 40px;
-}
-.logo {
-	width: 167px;
-	height: 100px;
 }
 
 
@@ -135,6 +152,8 @@ li {
 	font-weight: 500;
 	font-size: 63px;
 	line-height: 120%;
+	margin: 0;
+	margin-top: 90px;
 
 }
 .container1 h2 {
@@ -143,15 +162,16 @@ li {
 	font-weight: 300;
 	font-size: 19px;
 	line-height: 140%;
+	margin: 0;
+	margin-top: 50px;
 	margin-bottom: 160px;
+
 }
 
 /*-------------------------------------------------- Основные разделы --------------------------------------------------*/
 
 
 main {
-	padding-left: 10%;
-	padding-right: 10%;
 	font-family: Inter;
 }
 main h3 {
@@ -165,6 +185,19 @@ main h3 {
 	margin-bottom: 10px;
 }
 
+main .containers {
+	padding-bottom: 135px;
+	padding-left: 10%;
+	padding-right: 10%;
+}
+
+main .containers:nth-child(3) {
+	padding-bottom: 90px;
+}
+
+main .containers:last-child {
+	padding-bottom: 60px;
+}
 
 /*-------------------------------------------------- "О нас" --------------------------------------------------*/
 
@@ -178,6 +211,17 @@ main h3 {
 #about div {
 	background-color: #252427;
 	color: #FFFFFF;
+	position: relative;
+}
+
+#about div > div::before {
+	content: "";
+	width: 26px;
+	height: 4px;
+	top: 0;
+	left: 0;
+	position: absolute;
+	background-color: #037769;
 }
 
 #about .about_blocks {
@@ -186,8 +230,8 @@ main h3 {
 }
 #about .about_blocks div {
 	background: #252427;
-	border-top: 4px solid #037769;
-	padding-top: 10px;
+	/*border-top: 4px solid #037769;*/
+	padding-top: 14px;
 	
 }
 #about .about_blocks p {
@@ -195,11 +239,13 @@ main h3 {
 	font-weight: 300;
 	margin-bottom: 80px;
 }
-#about .lastp {
-	margin-top: 80px;               /*Заменить на last-child*/
-	margin-bottom: 135px;
+#about img {
+	margin-bottom: 80px;
 }
 
+#about img ~ p {
+	margin-bottom: 0;
+}
 
 /*#about .about_lines {
 	display: flex;
@@ -210,3 +256,100 @@ main h3 {
 	background: #252427;
 	border-top: 4px solid #037769;
 }*/
+
+
+/*-------------------------------------------------- "Что мы можем" --------------------------------------------------*/
+
+
+#spec div {
+	background-color: #FFFFFF;
+	color: #000000;
+}
+#spec div p {
+	margin: 0;
+}
+#spec .spec_line {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 55px;
+}
+#spec .spec_blocks {
+	/*border: 2px solid #FFFFFF;*/                /*Добавить границу для блочков*/
+	background-color: #F2F7F7;
+	width: 32%;
+	height: 238px;                                /*На макете: 238px, Должно быть: 286px*/
+}
+#spec .spec_blocks p:first-child {
+	padding-top: 30px;
+	margin-bottom: 5px;
+	color: #037769;
+	font-family: Inter, sans-serif;
+	font-variant: medium;
+	font-size: 28px;
+}
+#spec .spec_blocks p {
+	padding-left: 35px;
+	font-family: Inter, sans-serif;
+	font-variant: light;
+	font-size: 16px;
+}
+
+
+/*-------------------------------------------------- "Галерея" --------------------------------------------------*/
+
+
+#contacts_link {
+	text-align: center;
+}
+#contacts_link > p {
+	margin-top: 0;
+	margin-bottom: 30px;
+	font-variant: medium;
+	font-size: 30px;
+	text-align: center;
+	padding-top: 75px;
+}
+
+
+/*-------------------------------------------------- "Контакты" --------------------------------------------------*/
+
+
+#contacts .contacts_cont {
+	display: flex;
+	justify-content: space-between;
+}
+
+#contacts h4 {
+	font-variant: medium;
+	font-size: 30px;
+	padding-top: 10px;
+	margin-bottom: 30px;
+	padding-left: 20px;
+	padding-right: 20px;
+
+}
+#contacts p {
+	margin: 0;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+#contacts a {
+	color: #FFFFFF;
+	margin: 0;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+#contacts a:hover {
+	color: #64D8CA;
+}
+#contacts .contacts_cont div {
+	border-right: 1px solid #525252;
+	height: 180px;
+}
+#contacts .contacts_cont div:last-child {
+	/*border-right: 0;*/
+}
+
+
+/*-------------------------------------------------- "Как добраться" --------------------------------------------------*/
+
