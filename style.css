@@ -8,7 +8,7 @@
 /*-------------------------------------------------- Основные свойства --------------------------------------------------*/
 
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap');
 
 body {
 	background-color: #252427; /* Цвет фона */
@@ -18,6 +18,9 @@ body {
 	font-size: 16px;
 	color: #E3E3E3;
 }
+/*@media screen and (max-width: 1261px) {
+    
+}*/
 
 
 /*-------------------------------------------------- Свойства для ссылок --------------------------------------------------*/
@@ -105,7 +108,7 @@ main .containers:nth-child(even) {
 }
 .logo {
 	width: 167px;
-	height: 99px;
+	height: 100px;
 }
 header {
 	display: flex;
@@ -206,6 +209,7 @@ main .containers:last-child {
 	font-size: 20px;
 	margin-top: 0;
 	margin-bottom: 60px;
+	font-weight: 300;
 }
 
 #about div {
@@ -234,12 +238,19 @@ main .containers:last-child {
 	padding-top: 14px;
 	
 }
+#about > p {
+	line-height: 160%;
+}
 #about .about_blocks p {
 	font-size: 18px;
 	font-weight: 300;
 	margin-bottom: 80px;
+	line-height: 142%;
+	color: #D2D2D2;
 }
 #about img {
+	width: 100%;
+	/*height: 1024px;*/
 	margin-bottom: 80px;
 }
 
@@ -277,21 +288,22 @@ main .containers:last-child {
 	/*border: 2px solid #FFFFFF;*/                /*Добавить границу для блочков*/
 	background-color: #F2F7F7;
 	width: 32%;
-	height: 238px;                                /*На макете: 238px, Должно быть: 286px*/
+	height: 238px;
 }
 #spec .spec_blocks p:first-child {
 	padding-top: 30px;
 	margin-bottom: 5px;
 	color: #037769;
 	font-family: Inter, sans-serif;
-	font-variant: medium;
+	font-variant: normal;
 	font-size: 28px;
 }
 #spec .spec_blocks p {
 	padding-left: 35px;
 	font-family: Inter, sans-serif;
-	font-variant: light;
+	font-weight: 400;
 	font-size: 16px;
+	line-height: 155%;
 }
 
 
@@ -320,6 +332,7 @@ main .containers:last-child {
 }
 
 #contacts h4 {
+	font-weight: 500;
 	font-variant: medium;
 	font-size: 30px;
 	padding-top: 10px;
@@ -328,16 +341,12 @@ main .containers:last-child {
 	padding-right: 20px;
 
 }
-#contacts p {
-	margin: 0;
-	padding-left: 20px;
-	padding-right: 20px;
-}
 #contacts a {
 	color: #FFFFFF;
 	margin: 0;
 	padding-left: 20px;
 	padding-right: 20px;
+	font-weight: 300;
 }
 #contacts a:hover {
 	color: #64D8CA;
@@ -351,5 +360,13 @@ main .containers:last-child {
 }
 
 
-/*-------------------------------------------------- "Как добраться" --------------------------------------------------*/
+/*-------------------------------------------------- "Media-запросы" --------------------------------------------------*/
+
+
+
+/*-------------------------------------------------- Свойства Navbar`а --------------------------------------------------*/
+
+
+
+
 
