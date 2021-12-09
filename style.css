@@ -295,7 +295,7 @@ main .containers:last-child {
 #spec .spec_blocks p {
 	padding-left: 35px;
 	font-family: Inter, sans-serif;
-	font-weight: 400;
+	font-weight: 500;
 	font-size: 16px;
 	line-height: 155%;
 }
