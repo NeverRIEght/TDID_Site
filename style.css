@@ -319,12 +319,12 @@ main .containers:last-child {
 
 /*-------------------------------------------------- "Галерея" --------------------------------------------------*/
 
-#galery .galery_slides {
+#gallery .gallery_slides {
 	display: flex;
 	justify-content: space-between;
 }
 
-#galery .galery_slide img {
+#gallery .gallery_slide img {
 	height: 500px;
 }
 
