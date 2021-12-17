@@ -1,3 +1,5 @@
+// Скрипт плавного пролистывания на JQuerry
+
 $(document).ready(function()
 {
     $("#menu").on("click","a", function (event)
@@ -8,3 +10,10 @@ $(document).ready(function()
         $('body,html').animate({scrollTop: top}, 1500);
     });
 });
+
+// Получение ширины и высоты экрана
+
+// const screenWidth = window.screen.width;
+// const screenHeight = window.screen.height;
+
+// var obj = document.getElementByTagName('header');

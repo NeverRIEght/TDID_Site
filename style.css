@@ -94,12 +94,49 @@ main .containers:nth-child(even) {
 }
 
 
+/*-------------------------------------------------- Текстура на фоне --------------------------------------------------*/
+
+
+.texture {
+	position: absolute;
+}
+
+.texture:nth-of-type(1) {
+	top: 42px;
+	right: 0;
+}
+.texture:nth-of-type(2) {
+	top: 1912px;
+	right: 0;
+}
+.texture:nth-of-type(3) {
+	top: 2350px;
+	right: 0;
+}
+.texture:nth-of-type(4) {
+	top: 2645px;
+	left: 0;
+}
+.texture:nth-of-type(5) {
+	top: 4750px;
+	right: 0;
+}
+.texture:nth-of-type(6) {
+	top: 6765px;
+	right: 0;
+}
+.texture:nth-of-type(7) {
+	top: 7680px;
+	left: 0;
+}
+
+
 /*-------------------------------------------------- Свойства Navbar`а --------------------------------------------------*/
 
 
 .container {
 	height: 100px;
-	margin: 0;
+	margin: auto 0;
 	padding-top: 0;
 	padding-bottom: 0;
 }
@@ -197,6 +234,7 @@ main .containers:last-child {
 	padding-bottom: 60px;
 }
 
+
 /*-------------------------------------------------- "О нас" --------------------------------------------------*/
 
 
@@ -244,7 +282,7 @@ main .containers:last-child {
 	color: #D2D2D2;
 }
 #about img {
-	width: 1536px;                                    /*1536px*/
+	width: 100%;                                    /*1536px*/
 	margin-bottom: 80px;
 }
 
@@ -283,6 +321,7 @@ main .containers:last-child {
 	background-color: #F2F7F7;
 	width: 32%;
 	height: 238px;
+	z-index: 1;
 }
 #spec .spec_blocks p:first-child {
 	padding-top: 30px;
@@ -377,6 +416,17 @@ main .containers:last-child {
     .container {
     	width: 100%
     }
+    .container1 {
+    	padding-left: 2%;
+    	padding-right: 2%;
+    }
+    .containers {
+    	padding-left: 2%;
+    	padding-right: 2%;
+    }
+}
+@media screen and (max-width: 1170px) { /*Отключение фоновых текстур*/
+    
 }
 @media screen and (max-width: 1261px) { /*Активация вертикальных меню*/
     
