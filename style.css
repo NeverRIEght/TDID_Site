@@ -145,6 +145,10 @@ main .containers:nth-child(even) {
 	height: 100px;
 }
 header {
+	position: fixed;
+	background-color: #252427;
+
+
 	display: flex;
     flex-direction: row;
     align-items: center;
@@ -154,6 +158,7 @@ header {
     color: #E3E3E3;
     margin: 0 10%;
     border-bottom: 1px solid #858585;
+    z-index: 20;
 }
 ul {
 	margin: 0;

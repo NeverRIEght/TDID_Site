@@ -10,13 +10,13 @@
 		<div class="container">
 			<header>
 
-			<a href=""><img src="icons/logo.svg" alt="Logo" class="logo"></a>
-			<div class="topmenu">
+			<a data-goto="#topmenu" href=""><img src="icons/logo.svg" alt="Logo" class="logo"></a>
+			<div class="topmenu" id="topmenu">
 			<ul>
-				<li id="menu"><a href="#spec">Что мы можем</a></li>
-				<li id="menu"><a href="#contacts">Контакты</a></li>
-				<li id="menu"><a href="#galery">Галерея</a></li>
-				<li id="menu"><a href="#partners">Партнёры</a></li>
+				<li><a data-goto="#spec" href="">Что мы можем</a></li>
+				<li><a data-goto="#contacts" href="">Контакты</a></li>
+				<li><a data-goto="#gallery" href="">Галерея</a></li>
+				<li><a data-goto="#partners" href="">Партнёры</a></li>
 				<li></li>
 				<li><a href="students.html">Студентам</a></li>
 				<li><a href="">Абитуриентам</a></li>
@@ -29,15 +29,15 @@
 		<div class="container1">
 			<h1>Кафедра технологии&nbsp;и&nbsp;дизайна<br>изделий&nbsp;из&nbsp;древесины</h1>
 			<h2>Белорусский государственный технологический университет</h2>
-			<a class="button" href="#spec"><p>Что мы можем</p></a>
+			<a data-goto="#spec" class="button" href="#spec"><p>Что мы можем</p></a>
 		</div>
-		<img class="texture" src="icons/textures/1.svg">
+		<!-- <img class="texture" src="icons/textures/1.svg">
 		<img class="texture" src="icons/textures/2.svg">
 		<img class="texture" src="icons/textures/3.svg">
 		<img class="texture" src="icons/textures/4.svg">
 		<img class="texture" src="icons/textures/5.svg">
 		<img class="texture" src="icons/textures/6.svg">
-		<img class="texture" src="icons/textures/7.svg">
+		<img class="texture" src="icons/textures/7.svg"> -->
 		<main>
 			<div class="containers">
 				<div id="about">
@@ -105,7 +105,7 @@
 			<div class="containers">
 				<div id="contacts_link">
 					<p>Перейти к контактам кафедры</p>
-					<a class="button" href="#contacts"><p>Контакты</p></a>
+					<a data-goto="#contacts" class="button" href="#contacts"><p>Контакты</p></a>
 				</div>
 			</div>
 			<div class="containers">
