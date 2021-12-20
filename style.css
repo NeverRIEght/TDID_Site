@@ -1,22 +1,8 @@
-/*Заметки
-Внутри navbar элементы перестают быть в строчку при ширине менее n
-Придумать способ добавить горизонтальную черту - нормальной высоты
-
-*/
-
-
-/*-------------------------------------------------- Основные свойства --------------------------------------------------*/
-
-
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap');
 
 body {
-	background-color: #252427; /* Цвет фона */
 	margin: 0;
 	font-family: Inter, sans-serif;
-	font-variant: normal;
-	font-size: 16px;
-	color: #E3E3E3;
 }
 
 
@@ -56,22 +42,11 @@ a:hover {
 /*-------------------------------------------------- Фон сайта (тёмный-светлый) --------------------------------------------------*/
 
 
-/*main div:nth-child(odd) {
-	background-color: #252427;
-	color: #FFFFFF;
-	Font style: Medium;
-}*/
 main .hor:nth-child(odd) {
 	margin: 0;
 	padding: 0;
-	border-bottom: 1px solid #1858585;
 	margin-bottom: 80px;
 }
-/*main div:nth-child(even) {
-	background-color: #FFFFFF;
-	color: #000000;
-	Font style: Medium;
-}*/
 main .hor:nth-child(even) {
 	margin: 0;
 	padding: 0;
@@ -80,17 +55,21 @@ main .hor:nth-child(even) {
 }
 
 
-main .containers {
+main .containers_main {
 	padding-left: 120px;
 	padding-right: 120px;
 }
-main .containers:nth-child(odd) {
+main .containers_main:nth-child(odd) {
 	background-color: #252427;
 	color: #FFFFFF;
 }
-main .containers:nth-child(even) {
+main .containers_main:nth-child(even) {
 	background-color: #FFFFFF;
 	color: #000000;
+}
+main .containers_main:nth-child(8) {
+	background-color: #252427;
+	color: #FFFFFF;
 }
 
 
@@ -134,27 +113,29 @@ main .containers:nth-child(even) {
 /*-------------------------------------------------- Свойства Navbar`а --------------------------------------------------*/
 
 
-.container {
-	height: 100px;
+.container_top {
 	margin: auto 0;
-	padding-top: 0;
-	padding-bottom: 0;
+	padding: 0 10%;
+	background-color: #252427;
+}
+header {
+
+	display: flex;
+    flex-direction: row;
+	justify-content: space-between;
+    align-items: center;
+    
+    width: 100%;
+    height: 100px;
+    
+	font-size: 16px;
+	font-weight: 300;
+    
+	border-bottom: 1px solid #858585;
 }
 .logo {
 	width: 167px;
 	height: 100px;
-}
-header {
-	display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    width: 80%;
-    height: 100px;
-    color: #E3E3E3;
-    margin: 0 10%;
-    border-bottom: 1px solid #858585;
-    z-index: 20;
 }
 ul {
 	margin: 0;
@@ -172,66 +153,48 @@ li {
 	border-right: 1px solid #858585;
 	margin-right: 40px;
 }
-
-
-/*-------------------------------------------------- Свойства заголовка сайта --------------------------------------------------*/
-
-
-.container1 {
-	margin-top: 0;
-	padding-left: 10%;
-	padding-right: 10%;
-}
-.container1 h1 {
-	font-family: Inter;
-	font-style: normal;
+.container_top h1 {
 	font-weight: 500;
 	font-size: 63px;
 	line-height: 120%;
-	margin: 0;
-	margin-top: 90px;
-
+	margin: 90px 0 50px;
+	color: #FFFFFF;
 }
-.container1 h2 {
-	font-family: Inter;
-	font-style: normal;
+.container_top h2 {
 	font-weight: 300;
 	font-size: 19px;
 	line-height: 140%;
-	margin: 0;
-	margin-top: 50px;
-	margin-bottom: 160px;
-
+	margin: 0 0 160px;
+	color: #FFFFFF;
 }
+
 
 /*-------------------------------------------------- Основные разделы --------------------------------------------------*/
 
 
-main {
-	font-family: Inter;
-}
 main h3 {
-	font-family: Inter;
-	font-style: normal;
 	font-weight: 500;
 	font-size: 50px;
 	line-height: normal;
-	margin-top: 0;
+	margin: 0 0 10px;
 	padding-top: 120px;
-	margin-bottom: 10px;
 }
 
-main .containers {
+main #contacts h3 {
+	padding-top: 60px;
+}
+
+main .containers_main {
 	padding-bottom: 135px;
 	padding-left: 10%;
 	padding-right: 10%;
 }
 
-main .containers:nth-child(3) {
+main .containers_main:nth-child(3) {
 	padding-bottom: 90px;
 }
 
-main .containers:last-child {
+main .containers_main:last-child {
 	padding-bottom: 60px;
 }
 
@@ -283,23 +246,13 @@ main .containers:last-child {
 	color: #D2D2D2;
 }
 #about img {
-	width: 100%;                                    /*1536px*/
+	width: 100%;
 	margin-bottom: 80px;
 }
 
 #about img ~ p {
 	margin-bottom: 0;
 }
-
-/*#about .about_lines {
-	display: flex;
-	justify-content: space-between;
-}
-
-#about .about_lines div{
-	background: #252427;
-	border-top: 4px solid #037769;
-}*/
 
 
 /*-------------------------------------------------- "Что мы можем" --------------------------------------------------*/
@@ -318,7 +271,6 @@ main .containers:last-child {
 	margin-bottom: 55px;
 }
 #spec .spec_blocks {
-	/*border: 2px solid #FFFFFF;*/                /*Добавить границу для блочков*/
 	background-color: #F2F7F7;
 	width: 32%;
 	height: 238px;
@@ -359,13 +311,215 @@ main .containers:last-child {
 
 /*-------------------------------------------------- "Галерея" --------------------------------------------------*/
 
-#gallery .gallery_slides {
-	display: flex;
-	justify-content: space-between;
+
+.containers_gallery_swiper {
+	overflow: hidden;
+	position: relative;
+	display: block;
+}
+.containers_gallery_swiper img {
+	height: 582px;
+	margin: 0;
+}
+.containers_gallery_swiper p {
+	height: 16px;
+	margin: 0;
+	margin-bottom: 50px;
+}
+.containers_gallery_swiper .gallery_slide {
+	text-align: center;
 }
 
-#gallery .gallery_slide img {
-	height: 500px;
+
+
+.swiper_gallery_scrollbar-drag {
+	padding: 10px;
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.containers_gallery_swiper .swiper-scrollbar-drag {
+	background-color: #878787;
+	height: 10px;
+	margin: -5px 0; /*Регулировка высоты ползунка*/
+}
+
+
+
+
+.swiper-gallery-button-prev::after,
+.swiper-gallery-button-next::after {
+	color: #FFFFFF;
+	font-size: 59px;
+	padding: 15px;
+	background: rgba(0, 0, 0, 0.4);
+	
+}
+
+.swiper-gallery-button-prev:hover::after,
+.swiper-gallery-button-next:hover::after {
+	font-size: 60px;
+}
+
+
+/*-------------------------------------------------- "Состав кафедры" --------------------------------------------------*/
+
+
+.containers_people_swiper {
+	overflow: hidden;
+	position: relative;
+	display: block;
+}
+.containers_people_swiper img {
+	height: 390px;
+	margin: 0;
+}
+
+.containers_people_swiper h1 {
+	margin: 0;
+	padding: 0;
+	margin-top: 20px;
+	font-size: 33px;
+	font-weight: 500;
+	text-transform: uppercase;
+}
+.containers_people_swiper h2 {
+	margin: 0;
+	padding: 0;
+	margin-top: 4px;
+	font-size: 19px;
+	font-weight: 500;
+}
+.containers_people_swiper h3 {
+	margin: 0;
+	padding: 0;
+	margin-top: 18px;
+	font-size: 16px;
+	font-weight: 300;
+}
+.containers_people_swiper h4 {
+	margin: 0;
+	padding: 0;
+	margin-top: 12px;
+	margin-bottom: 50px;
+	font-size: 12px;
+	font-weight: 200;
+}
+
+.containers_people_swiper .people_slide {
+	text-align: center;
+}
+
+
+
+.swiper_people_scrollbar-drag {
+	padding: 10px;
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.containers_people_swiper .swiper-scrollbar-drag {
+	background-color: #878787;
+	height: 10px;
+	margin: -5px 0; /*Регулировка высоты ползунка*/
+}
+
+
+
+
+.swiper-people-button-prev::after,
+.swiper-people-button-next::after {
+	color: #FFFFFF;
+	font-size: 59px;
+	padding: 15px;
+	background: rgba(0, 0, 0, 0.4);
+	
+}
+
+.swiper-people-button-prev:hover::after,
+.swiper-people-button-next:hover::after {
+	font-size: 60px;
+}
+
+
+/*-------------------------------------------------- "Новости" --------------------------------------------------*/
+
+
+.containers_news_swiper {
+	overflow: hidden;
+	position: relative;
+	display: block;
+}
+.containers_news_swiper img {
+	height: 390px;
+	margin: 0;
+}
+
+.containers_news_swiper .news_slide {
+	text-align: center;
+}
+
+
+
+.swiper_news_scrollbar-drag {
+	padding: 10px;
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.containers_news_swiper .swiper-scrollbar-drag {
+	background-color: #878787;
+	height: 10px;
+	margin: -5px 0; /*Регулировка высоты ползунка*/
+}
+
+
+
+
+.swiper-news-button-prev::after,
+.swiper-news-button-next::after {
+	color: #FFFFFF;
+	font-size: 59px;
+	padding: 15px;
+	background: rgba(0, 0, 0, 0.4);
+	
+}
+
+.swiper-news-button-prev:hover::after,
+.swiper-news-button-next:hover::after {
+	font-size: 60px;
+}
+
+
+/*-------------------------------------------------- "Партнеры" --------------------------------------------------*/
+
+
+.containers_partners_swiper {
+	overflow: hidden;
+	position: relative;
+	display: block;
+}
+.containers_partners_swiper img {
+	vertical-align: middle;
+	height: 60px;
+	margin: 0;
+	margin-bottom: 50px;
+	text-align: center;
+}
+.containers_partners_swiper .gallery_slide {
+	text-align: center;
+}
+
+.swiper_partners_scrollbar-drag {
+	padding: 10px;
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.containers_partners_swiper .swiper-scrollbar-drag {
+	background-color: #878787;
+	height: 10px;
+	margin: -5px 0; /*Регулировка высоты ползунка*/
 }
 
 
@@ -401,9 +555,6 @@ main .containers:last-child {
 	border-right: 1px solid #525252;
 	height: 180px;
 }
-#contacts .contacts_cont div:last-child {
-	/*border-right: 0;*/
-}
 
 
 /*-------------------------------------------------- "Media-запросы" --------------------------------------------------*/
@@ -421,7 +572,7 @@ main .containers:last-child {
     	padding-left: 2%;
     	padding-right: 2%;
     }
-    .containers {
+    .containers_main {
     	padding-left: 2%;
     	padding-right: 2%;
     }
@@ -432,3 +583,6 @@ main .containers:last-child {
 @media screen and (max-width: 1261px) { /*Активация вертикальных меню*/
     
 }
+
+
+/* 1024 - маленький монитор */

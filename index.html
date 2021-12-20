@@ -1,48 +1,56 @@
 <!DOCTYPE html>
-
 <html>
 	<head>
+		
+		<!-- Подключение собственного файла стилей, а также доп. файлов: слайдер "Swiper" -->
 		<link rel="stylesheet" href="style.css">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title></title>
+		<link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css">
+
+		<!-- Настройка viewport, запрещаем пользователю ломать верстку масштабированием -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+
+		<!-- Просто заголовок -->
+		<title>ТДиД БГТУ</title>
+
 	</head>
 	<body>
-		<div class="container">
+
+		<!-- Контейнер для верхней части сайта. Нужен для поддержки адаптивности и расположения контента -->
+		<div class="container_top">
+
 			<header>
 
-			<a data-goto="#topmenu" href=""><img src="icons/logo.svg" alt="Logo" class="logo"></a>
-			<div class="topmenu" id="topmenu">
-			<div class="topmenu_icon">
-				<span></span>
-			</div>
-			<ul>
-				<li><a data-goto="#spec" href="">Что мы можем</a></li>
-				<li><a data-goto="#contacts" href="">Контакты</a></li>
-				<li><a data-goto="#gallery" href="">Галерея</a></li>
-				<li><a data-goto="#partners" href="">Партнёры</a></li>
-				<li></li>
-				<li><a href="students.html">Студентам</a></li>
-				<li><a href="">Абитуриентам</a></li>
-			</ul>
-			</div>
+				<!-- Логотип, клик на который возвращает нас на главную страницу -->
+				<a href=""><img src="icons/logo.svg" alt="Logo" class="logo"></a>
+
+				<!-- Контейнер меню сайта -->
+				<div class="topmenu" id="topmenu">
+				
+					<!-- Пункты меню в виде списка. Goto воспринимается JS для создания плавной анимации прокрутки -->
+					<ul>
+						<li><a data-goto="#spec" href="">Что мы можем</a></li>
+						<li><a data-goto="#contacts" href="">Контакты</a></li>
+						<li><a data-goto="#gallery" href="">Галерея</a></li>
+						<li><a data-goto="#partners" href="">Партнёры</a></li>
+
+						<!-- Пустой элемент с границей, служит разделителем -->
+						<li></li>
+						
+						<li><a href="students.html">Студентам</a></li>
+						<li><a href="">Абитуриентам</a></li>
+					</ul>
+				</div>
 			</header>
-		</div>
 
-
-		<div class="container1">
+			<!-- Заголовок сайта -->
 			<h1>Кафедра технологии&nbsp;и&nbsp;дизайна<br>изделий&nbsp;из&nbsp;древесины</h1>
 			<h2>Белорусский государственный технологический университет</h2>
+
+			<!-- Стилизованная кнопка для перехода к основному разделу -->
 			<a data-goto="#spec" class="button" href="#spec"><p>Что мы можем</p></a>
 		</div>
-		<!-- <img class="texture" src="icons/textures/1.svg">
-		<img class="texture" src="icons/textures/2.svg">
-		<img class="texture" src="icons/textures/3.svg">
-		<img class="texture" src="icons/textures/4.svg">
-		<img class="texture" src="icons/textures/5.svg">
-		<img class="texture" src="icons/textures/6.svg">
-		<img class="texture" src="icons/textures/7.svg"> -->
 		<main>
-			<div class="containers">
+			<div class="containers_main">
 				<div id="about">
 					<h3>О нас</h3>
 					<div class="hor"></div>
@@ -57,7 +65,7 @@
 					<p>Накопленный многолетний опыт и&nbsp;современное лабораторное<br>оборудование позволяют решать сложнейшие производственные задачи<br>в&nbsp;кратчайшие сроки. Высокая квалификация сотрудников — это гарантия<br>абсолютного качества выполняемых работ.</p>
 				</div>
 			</div>
-			<div class="containers">
+			<div class="containers_main">
 				<div id="spec">
 					<h3>Что мы можем</h3>
 					<div class="hor"></div>
@@ -105,54 +113,248 @@
 					</div>
 				</div>
 			</div>
-			<div class="containers">
+			<div class="containers_main">
 				<div id="contacts_link">
 					<p>Перейти к контактам кафедры</p>
 					<a data-goto="#contacts" class="button" href="#contacts"><p>Контакты</p></a>
 				</div>
 			</div>
-			<div class="containers">
+			<div class="containers_main">
 				<div id="gallery">
 					<h3>Галерея</h3>
 					<div class="hor"></div>
-					<!-- <div class="gallery_slides">
-						<div class="gallery_slide">
-							<img src="images/galery/1_design laboratory.jpg">
+					<div class="containers_gallery_swiper">
+						<div class="swiper-container gallery_container">
+							<div class="swiper-wrapper gallery_wrapper">
+								<div class="swiper-slide gallery_slide">
+									<img src="images/gallery/1_design laboratory.jpg" alt="Лаборатория концептуального дизайна">
+									<p>Лаборатория концептуального дизайна</p>
+								</div>
+								<div class="swiper-slide gallery_slide">
+									<img src="images/gallery/2_Blum Minipress P.jpg" alt="Blum Minipress P">
+									<p>Blum Minipress P</p>
+								</div>
+								<div class="swiper-slide gallery_slide">
+									<img src="images/gallery/3_card layout belfurniture.jpg" alt="Макет Визитки Белорусская мебель">
+									<p>Макет Визитки Белорусская мебель</p>
+								</div>
+								<div class="swiper-slide gallery_slide">
+									<img src="images/gallery/4_factory plan.jpg" alt="План цеха механической обработки древесины">
+									<p>План цеха механической обработки древесины</p>
+								</div>
+								<div class="swiper-slide gallery_slide">
+									<img src="images/gallery/5_BSTU style.jpg" alt="Макет фирменного стиля УО БГТУ">
+									<p>Макет фирменного стиля УО БГТУ</p>
+								</div>
+								<div class="swiper-slide gallery_slide">
+									<img src="images/gallery/6_statue belfurniture.jpg" alt="Образец статуэтки Белорусская мебель">
+									<p>Образец статуэтки Белорусская мебель</p>
+								</div>
+								<div class="swiper-slide gallery_slide">
+									<img src="images/gallery/7_telehany logo.jpg" alt="Логотип фабрики Телеханы">
+									<p>Логотип фабрики Телеханы</p>
+								</div>
+								<div class="swiper-slide gallery_slide">
+									<img src="images/gallery/8_furniture docks.jpg" alt="Конструкторская документация для мебели">
+									<p>Конструкторская документация для мебели</p>
+								</div>
+								<div class="swiper-slide gallery_slide">
+									<img src="images/gallery/9_card layout TDID.jpg" alt="Макет визитки кафедры ТДИД">
+									<p>Макет визитки кафедры ТДИД</p>
+								</div>
+								<div class="swiper-slide gallery_slide">
+									<img src="images/gallery/10_multiGloss 268.jpg" alt="Блескомер MultiGloss 268">
+									<p>Блескомер MultiGloss 268</p>
+								</div>
+							</div>
+							<div class="swiper-button-next"></div>
+							<div class="swiper-button-prev"></div>
+							<div class="swiper-scrollbar swiper_gallery_scrollbar"></div>
 						</div>
-						<div class="gallery_slide">
-							<img src="images/galery/1_design laboratory.jpg">
-						</div>
-					</div> -->
+					</div>
 				</div>
 			</div>
-			<div class="containers">
+			<div class="containers_main">
 				<div id="people">
 					<h3>Состав кафедры</h3>
 					<div class="hor"></div>
+					<div class="containers_people_swiper">
+						<div class="swiper-container people_container">
+							<div class="swiper-wrapper people_wrapper">
+								<div class="swiper-slide people_slide">
+									<img src="images/professors/1_chuikov.jpg" alt="Чуйков С.А.">
+									<h1>Чуйков</h1>
+									<h2>Сергей Алексеевич</h2>
+									<h3>Заведующий кафедрой</h3>
+									<h4>Кандидат технических наук<br>Ауд. 314-4</h4>
+								</div>
+								<div class="swiper-slide people_slide">
+									<img src="images/professors/2_shetko.jpg" alt="Шетько С.В.">
+									<h1>Шетько</h1>
+									<h2>Сергей Васильевич</h2>
+									<h3>Доцент</h3>
+									<h4>Кандидат технических наук<br>Ауд. 358-4</h4>
+								</div>
+								<div class="swiper-slide people_slide">
+									<img src="images/professors/3_prokhorchik.jpg" alt="Прохорчик С.А.">
+									<h1>Прохорчик</h1>
+									<h2>Сергей Александрович</h2>
+									<h3>Доцент</h3>
+									<h4>Кандидат технических наук<br>Ауд. 301-2</h4>
+								</div>
+								<div class="swiper-slide people_slide">
+									<img src="images/professors/4_ignatovich.jpg" alt="Игнатович Л.В.">
+									<h1>Игнатович</h1>
+									<h2>Людмила Владимировна</h2>
+									<h3>Доцент</h3>
+									<h4>Кандидат технических наук<br>Ауд. 403-4</h4>
+								</div>
+								<div class="swiper-slide people_slide">
+									<img src="images/professors/5_trofimov.jpg" alt="Трофимов С.П.">
+									<h1>ТРОФИМОВ</h1>
+									<h2>Сергей Петрович</h2>
+									<h3>Доцент</h3>
+									<h4>Кандидат технических наук<br>Ауд. 412-4</h4>
+								</div>
+								<div class="swiper-slide people_slide">
+									<img src="images/professors/6_hayduk.jpg" alt="Гайдук С.С.">
+									<h1>Гайдук</h1>
+									<h2>Сергей Сергеевич</h2>
+									<h3>Доцент</h3>
+									<h4>Кандидат технических наук<br>Ауд. 412-4</h4>
+								</div>
+								<div class="swiper-slide people_slide">
+									<img src="images/professors/" alt="Козлов Н.Г.">
+									<h1>КОЗЛОВ</h1>
+									<h2>Николай Гельевич</h2>
+									<h3>Профессор</h3>
+									<h4>Доктор химических наук<br>Ауд. 313-4</h4>
+								</div>
+								<div class="swiper-slide people_slide">
+									<img src="images/professors/8_rudak.jpg" alt="Рудак О.Г.">
+									<h1>РУДАК</h1>
+									<h2>Оксана Геннадьевна</h2>
+									<h3>Старший преподаватель</h3>
+									<h4>Ауд. 313-4</h4>
+								</div>
+								<div class="swiper-slide people_slide">
+									<img src="images/professors/9_ruchkina.jpg" alt="Ручкина Е.В.">
+									<h1>РУЧКИНА</h1>
+									<h2>Елена Васильевна</h2>
+									<h3>Ассистент</h3>
+									<h4>Ауд. 403-4</h4>
+								</div>
+								<div class="swiper-slide people_slide">
+									<img src="images/professors/10_polkhovsky.jpg" alt="Полховский А.В.">
+									<h1>ПОЛХОВСКИЙ</h1>
+									<h2>Антон Викторович</h2>
+									<h3>Ассистент</h3>
+									<h4>Ауд. 412-4</h4>
+								</div>
+								<div class="swiper-slide people_slide">
+									<img src="images/professors/" alt="Гордиевич А.В.">
+									<h1>ГОРДИЕВИЧ</h1>
+									<h2>Екатерина Ивановна</h2>
+									<h3>Преподаватель-стажер</h3>
+									<h4>Ауд. 403-4</h4>
+								</div>
+								<div class="swiper-slide people_slide">
+									<img src="images/professors/" alt="Куневич В.О.">
+									<h1>КУНЕВИЧ</h1>
+									<h2>Валерия Олеговна</h2>
+									<h3>Преподаватель-стажер</h3>
+									<h4>Ауд. 403-4</h4>
+								</div>
+								<div class="swiper-slide people_slide">
+									<img src="images/professors/13_mukhurova.jpg" alt="Мухурова Е.А.">
+									<h1>МУХУРОВА</h1>
+									<h2>Екатерина Александровна</h2>
+									<h3>Заведующий лабораторией</h3>
+									<h4>Ауд. 415-4</h4>
+								</div>
+								<div class="swiper-slide people_slide">
+									<img src="images/professors/13_mukhurova.jpg" alt="Мухурова Е.А.">
+									<h1>МУХУРОВА</h1>
+									<h2>Екатерина Александровна</h2>
+									<h3>Заведующий лабораторией</h3>
+									<h4>Ауд. 415-4</h4>
+								</div>
+							</div>
+							<div class="swiper-people-button-next"></div>
+							<div class="swiper-people-button-prev"></div>
+							<div class="swiper-scrollbar swiper_people_scrollbar"></div>
+						</div>
+					</div>
 				</div>
 			</div>
-			<div class="containers">
+			<div class="containers_main">
 				<div id="news">
 					<h3>Новости</h3>
 					<div class="hor"></div>
+					<div class="containers_partners_swiper">
+						<div class="swiper-container partners_container">
+							<div class="swiper-wrapper partners_wrapper">
+								<div class="swiper-slide partners_slide">
+									<img src="images/news/1.jpg" alt="">
+									
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
-			<div class="containers">
+			<div class="containers_main">
 				<div id="place">
 					<h3>Как добраться</h3>
 					<div class="hor"></div>
-					<div class="map" align="center">
+					<div class="map">
 						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3818.18830434618!2d27.553331298343!3d53.89115472433353!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46dbcfdb0e1ee14f%3A0xed06ae40990205e!2z0JrQsNGE0LXQtNGA0LAg0YLQtdGF0L3QvtC70L7Qs9C40Lgg0LTQtdGA0LXQstC-0L7QsdGA0LDQsdCw0YLRi9Cy0LDRjtGJ0LjRhSDQv9GA0L7QuNC30LLQvtC00YHRgtCy!5e0!3m2!1sru!2sby!4v1638898037330!5m2!1sru!2sby" width="100%" height="500" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
 					</div>
 				</div>
 			</div>
-			<div class="containers">
+			<div class="containers_main">
 				<div id="partners">
 					<h3>Наши партнёры</h3>
 					<div class="hor"></div>
+					<div class="containers_partners_swiper">
+						<div class="swiper-container partners_container">
+							<div class="swiper-wrapper partners_wrapper">
+								<div class="swiper-slide partners_slide">
+									<img src="icons/partners/1.png" alt="">
+								</div>
+								<div class="swiper-slide partners_slide">
+									<img src="icons/partners/2.png" alt="">
+								</div>
+								<div class="swiper-slide partners_slide">
+									<img src="icons/partners/3.png" alt="">
+								</div>
+								<div class="swiper-slide partners_slide">
+									<img src="icons/partners/4.png" alt="">
+								</div>
+								<div class="swiper-slide partners_slide">
+									<img src="icons/partners/5.png" alt="">
+								</div>
+								<div class="swiper-slide partners_slide">
+									<img src="icons/partners/6.png" alt="">
+								</div>
+								<div class="swiper-slide partners_slide">
+									<img src="icons/partners/7.png" alt="">
+								</div>
+								<div class="swiper-slide partners_slide">
+									<img src="icons/partners/8.png" alt="">
+								</div>
+								<div class="swiper-slide partners_slide">
+									<img src="icons/partners/9.png" alt="">
+								</div>
+								<div class="swiper-slide partners_slide">
+									<img src="icons/partners/10.png" alt="">
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
-			<div class="containers">
+			<div class="containers_main">
 				<div id="contacts">
 					<h3>Контакты</h3>
 					<div class="hor"></div>
@@ -177,11 +379,21 @@
 				</div>
 			</div>
 		</main>
-		
 
 
 
-		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+
+
+
+		<!-- Следующие элементы вынесены в самый конец с целью понижения приоритета загрузки -->
+		<!-- <img class="texture" src="icons/textures/1.svg">
+		<img class="texture" src="icons/textures/2.svg">
+		<img class="texture" src="icons/textures/3.svg">
+		<img class="texture" src="icons/textures/4.svg">
+		<img class="texture" src="icons/textures/5.svg">
+		<img class="texture" src="icons/textures/6.svg">
+		<img class="texture" src="icons/textures/7.svg"> -->
+		<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
 		<script type="text/javascript" src="jscript.js"></script>
 	</body>
 </html>
