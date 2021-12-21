@@ -328,9 +328,9 @@ main .containers_main:last-child {
 .containers_gallery_swiper p {
 	height: 16px;
 	margin: 0;
-	margin-bottom: 10px;
+	margin-bottom: 70px;
 }
-.containers_gallery_swiper .gallery_slide {
+.containers_gallery_swiper {
 	text-align: center;
 }
 
@@ -341,6 +341,18 @@ main .containers_main:last-child {
 .containers_gallery_swiper .swiper-slide:not(.swiper-slide-active):not(.swiper-slide-next) {
 	opacity: 0.4;
 	transition: opacity transform 0.8s ease;
+}
+
+.swiper_gallery_scrollbar-drag {
+	padding: 10px;
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.containers_gallery_swiper .swiper-scrollbar-drag {
+	background-color: #878787;
+	height: 10px;
+	margin: -5px 0; /*Регулировка высоты ползунка*/
 }
 
 
@@ -401,6 +413,10 @@ main .containers_main:last-child {
 	margin-bottom: 50px;
 	font-size: 12px;
 	font-weight: 200;
+}
+
+.containers_people_swiper .people_textcontainer {
+	text-align: left;
 }
 
 .containers_people_swiper .people_slide {

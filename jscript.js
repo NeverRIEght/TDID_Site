@@ -159,6 +159,9 @@ if (menuLinks.length > 0) {
 
 
 
+//Скрипт для контейнеров текста
+
+// containers_people_swiper
 
 
 
@@ -207,6 +210,10 @@ new Swiper('.gallery_container', {
     navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
+    },
+    scrollbar: {
+        el: '.swiper-scrollbar',
+        draggable: true,
     },
     allowTouchMove: false,
     //Анимация
@@ -295,12 +302,12 @@ new Swiper('.partners_container', {
         },
     },
 
-    loop: true,
-    autoplay: {
-        delay: 1500,
-        stopOnLastSlide: false,
-        disableOnInteraction: false,
-    },
+    // loop: true,
+    // autoplay: {
+    //     delay: 1500,
+    //     stopOnLastSlide: false,
+    //     disableOnInteraction: false,
+    // },
 })
 
 new Swiper('.news_container', {
