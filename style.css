@@ -1,3 +1,6 @@
+/*-------------------------------------------------- 0.Общее --------------------------------------------------*/
+
+
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap');
 
 body {
@@ -318,33 +321,27 @@ main .containers_main:last-child {
 	display: block;
 }
 .containers_gallery_swiper img {
-	height: 582px;
+	height: 428px;
 	margin: 0;
+	margin-bottom: 10px;
 }
 .containers_gallery_swiper p {
 	height: 16px;
 	margin: 0;
-	margin-bottom: 50px;
+	margin-bottom: 10px;
 }
 .containers_gallery_swiper .gallery_slide {
 	text-align: center;
 }
 
-
-
-.swiper_gallery_scrollbar-drag {
-	padding: 10px;
-	padding-left: 0;
-	padding-right: 0;
+.containers_gallery_swiper .swiper-slide-active{
+	opacity: 1.0;
+	transition: opacity transform 0.8s ease;
 }
-
-.containers_gallery_swiper .swiper-scrollbar-drag {
-	background-color: #878787;
-	height: 10px;
-	margin: -5px 0; /*Регулировка высоты ползунка*/
+.containers_gallery_swiper .swiper-slide:not(.swiper-slide-active):not(.swiper-slide-next) {
+	opacity: 0.4;
+	transition: opacity transform 0.8s ease;
 }
-
-
 
 
 .swiper-gallery-button-prev::after,
@@ -475,8 +472,8 @@ main .containers_main:last-child {
 
 
 
-.swiper-news-button-prev::after,
-.swiper-news-button-next::after {
+.swiper-button-prev::after,
+.swiper-button-next::after {
 	color: #FFFFFF;
 	font-size: 59px;
 	padding: 15px;
@@ -484,8 +481,8 @@ main .containers_main:last-child {
 	
 }
 
-.swiper-news-button-prev:hover::after,
-.swiper-news-button-next:hover::after {
+.swiper-button-prev:hover::after,
+.swiper-button-next:hover::after {
 	font-size: 60px;
 }
 
