@@ -21,6 +21,42 @@ if (menuLinks.length > 0) {
     }
 }
 
+//Конструктор для состава кафедры
+
+let people = document.getElementByClassName('people_wrapper');
+
+surname = new Array();
+surname[0] = "";
+surname[1] = "";
+surname[2] = "";
+surname[3] = "";
+surname[4] = "";
+surname[5] = "";
+surname[6] = "";
+surname[7] = "";
+surname[8] = "";
+surname[9] = "";
+surname[10] = "";
+surname[11] = "";
+surname[12] = "";
+surname[13] = "";
+surname[14] = "";
+surname[15] = "";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // Получение ширины и высоты экрана
 
 // const screenWidth = window.screen.width;
