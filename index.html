@@ -25,12 +25,16 @@
 			<!-- Логотип, клик на который возвращает нас на главную страницу -->
 			<a href=""><img src="icons/logo.svg" alt="Logo" class="logo"></a>
 
-			<!-- Контейнер меню сайта -->
-			<div class="topmenu" id="topmenu">
+			<!-- Кнопка меню -->
+			<button class="burger" aria-controls="primary_navigation" aria-expanded="false">
+				<span></span>
+			</button>
 
+			<!-- Контейнер меню сайта -->
+			<nav>
 				<!-- Пункты меню в виде списка. Goto воспринимается JS для создания плавной анимации прокрутки -->
-				<ul>
-					<li><a data-goto="#spec" href="">Что мы можем</a></li>
+				<ul id="primary_navigation" data-visible="first" class="primary_navigation">
+					<li><a data-goto="#spec" href="">Что&nbsp;мы&nbsp;можем</a></li>
 					<li><a data-goto="#contacts" href="">Контакты</a></li>
 					<li><a data-goto="#gallery" href="">Галерея</a></li>
 					<li><a data-goto="#partners" href="">Партнёры</a></li>
@@ -41,7 +45,7 @@
 					<li><a href="students.html">Студентам</a></li>
 					<li><a href="">Абитуриентам</a></li>
 				</ul>
-			</div>
+			</nav>
 		</header>
 
 		<!-- Заголовок сайта -->
@@ -457,8 +461,8 @@
 		<img class="texture" src="icons/textures/5.svg">
 		<img class="texture" src="icons/textures/6.svg">
 		<img class="texture" src="icons/textures/7.svg"> -->
-	<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
-	<script type="text/javascript" src="jscript.js"></script>
+	<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js" defer></script>
+	<script type="text/javascript" src="jscript.js" defer></script>
 </body>
 
 </html>

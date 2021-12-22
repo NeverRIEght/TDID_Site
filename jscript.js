@@ -159,13 +159,33 @@ if (menuLinks.length > 0) {
 
 
 
-//Скрипт для контейнеров текста
+//Меню бургер
 
-// containers_people_swiper
+const Nav = document.querySelector('.primary_navigation');
+const navToggle = document.querySelector('.burger');
 
+navToggle.addEventListener('click', () => {
+    const visibility = Nav.getAttribute('data-visible');
+    
+    if(visibility === "false") {
+        Nav.setAttribute('data-visible', true);
+        navToggle.setAttribute('aria-expanded', true);
+    }
+    else if(visibility === "true") {
+        Nav.setAttribute('data-visible', false);
+        navToggle.setAttribute('aria-expanded', false);
+    }
+    else if(visibility === "first") {
+        Nav.setAttribute('data-visible', true);
+        navToggle.setAttribute('aria-expanded', true);
+    }
 
-
-
+    window.addEventListener('resize', () => {
+        if(visibility === "false") {
+            visibility = "first";
+        }
+    });
+});
 
 
 
@@ -219,7 +239,6 @@ new Swiper('.gallery_container', {
     //Анимация
     speed: 800,
     effect: 'slide',
-    loop: true,
     // autoplay: {
     //     delay: 1500,
     //     stopOnLastSlide: false,
@@ -302,12 +321,12 @@ new Swiper('.partners_container', {
         },
     },
 
-    // loop: true,
-    // autoplay: {
-    //     delay: 1500,
-    //     stopOnLastSlide: false,
-    //     disableOnInteraction: false,
-    // },
+    loop: true,
+    autoplay: {
+        delay: 1500,
+        stopOnLastSlide: false,
+        disableOnInteraction: false,
+    },
 })
 
 new Swiper('.news_container', {
