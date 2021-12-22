@@ -8,7 +8,7 @@
 	<link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css">
 
 	<!-- Настройка viewport, запрещаем пользователю ломать верстку масштабированием -->
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 
 	<!-- Просто заголовок -->
 	<title>ТДиД БГТУ</title>
@@ -26,14 +26,12 @@
 			<a href=""><img src="icons/logo.svg" alt="Logo" class="logo"></a>
 
 			<!-- Кнопка меню -->
-			<button class="burger" aria-controls="primary_navigation" aria-expanded="false">
-				<span></span>
-			</button>
+			<button class="burger" aria-controls="primary_navigation" aria-expanded="false"></button>
 
 			<!-- Контейнер меню сайта -->
 			<nav>
 				<!-- Пункты меню в виде списка. Goto воспринимается JS для создания плавной анимации прокрутки -->
-				<ul id="primary_navigation" data-visible="first" class="primary_navigation">
+				<ul id="primary_navigation" data-visible="false" class="primary_navigation">
 					<li><a data-goto="#spec" href="">Что&nbsp;мы&nbsp;можем</a></li>
 					<li><a data-goto="#contacts" href="">Контакты</a></li>
 					<li><a data-goto="#gallery" href="">Галерея</a></li>

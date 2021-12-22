@@ -153,27 +153,25 @@ ul a {
 	.primary_navigation {
 		position: fixed;
 		inset: 0 0 0 60%;
-		height: min(350px, 90%);
 		z-index: 100;
 		
 		flex-direction: column;
 		padding-left: 5%;
-		padding-top: 9%;
-
+		padding-top: 120px;
 		text-align: left;
 		background: #434343b4;
 		backdrop-filter: blur(8px);
-		transform: translateY(-100%);
+		transform: translateX(100%);
 	}
 	.primary_navigation[data-visible="true"] {
-		transform: translateY(0%);
+		transform: translateX(0%);
 		transition: transform 0.8s ease;
 	}
-	.primary_navigation[data-visible="false"] {
-		transform: translateY(-100%);
-		transition: transform 0.8s ease;
+	ul {
+		margin-bottom: 120px;
 	}
 	li {
+		position: relative;
 		margin-bottom: 3%;
 	}
 	li:nth-child(5) {
@@ -186,19 +184,102 @@ ul a {
 	}
 	.burger {
 		display: block;
-		position: fixed;
-		background: url("icons/burger.svg");
+		position: absolute;
+		background: url("icons/burger.png");
 		background-repeat: no-repeat;
 		width: 60px;
 		aspect-ratio: 1 / 1;
 		border: 0;
-		top: 5.5%;
+		top: 36px;
 		right: 10%;
 		z-index: 999;
 	}
+	.burger:hover {
+		background: url("icons/burger_hover.png");
+		background-repeat: no-repeat;
+	}
 	.burger[aria-expanded="true"] {
-		background-image: url(icons/cross.svg);
-
+		background-image: url("icons/cross.png");
+	}
+	.burger[aria-expanded="true"]:hover {
+		background-image: url("icons/cross_hover.png");
+		background-repeat: no-repeat;
+	}
+}
+@media screen and (max-width: 800px) {
+	.primary_navigation a {
+		font-size: 20px;
+	}
+}
+@media screen and (max-width: 620px) {
+	.primary_navigation {
+		inset: 0;
+		transform: none;
+		transform: translateY(-100%);
+	}
+	.primary_navigation[data-visible="true"] {
+		transform: translateY(0%);
+		transition: transform 0.8s ease;
+	}
+	.primary_navigation a {
+		font-size: 25px;
+	}
+}
+@media handheld and (max-width: 360px) {
+	.primary_navigation {
+		position: fixed;
+		inset: 0;
+		z-index: 100;
+		
+		flex-direction: column;
+		padding-left: 5%;
+		padding-top: 120px;
+		text-align: left;
+		background: #434343b4;
+		backdrop-filter: blur(8px);
+		transform: translateY(-100%);
+	}
+	.primary_navigation[data-visible="true"] {
+		transform: translateY(0%);
+		transition: transform 0.8s ease;
+	}
+	ul {
+		margin-bottom: 120px;
+	}
+	li {
+		position: relative;
+		margin-bottom: 3%;
+	}
+	li:nth-child(5) {
+		border-bottom: 1px solid #616161;
+		margin-top: 2%;
+		margin-bottom: 5%;
+	}
+	.primary_navigation a {
+		font-size: 25px;
+	}
+	.burger {
+		display: block;
+		position: absolute;
+		background: url("icons/burger.png");
+		background-repeat: no-repeat;
+		width: 60px;
+		aspect-ratio: 1 / 1;
+		border: 0;
+		top: 36px;
+		right: 10%;
+		z-index: 999;
+	}
+	.burger:hover {
+		background: url("icons/burger_hover.png");
+		background-repeat: no-repeat;
+	}
+	.burger[aria-expanded="true"] {
+		background-image: url("icons/cross.png");
+	}
+	.burger[aria-expanded="true"]:hover {
+		background-image: url("icons/cross_hover.png");
+		background-repeat: no-repeat;
 	}
 }
 
