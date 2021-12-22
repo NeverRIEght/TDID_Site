@@ -543,7 +543,7 @@ main .containers_main:last-child {
 }
 
 .containers_people_swiper .people_textcontainer {
-	text-align: left;
+	text-align: center;
 }
 
 .containers_people_swiper .people_slide {
@@ -642,10 +642,8 @@ main .containers_main:last-child {
 	vertical-align: middle;
 	height: 60px;
 	margin: 0;
-	margin-bottom: 50px;
-	text-align: center;
 }
-.containers_partners_swiper .gallery_slide {
+.containers_partners_swiper .partners_slide {
 	text-align: center;
 }
 

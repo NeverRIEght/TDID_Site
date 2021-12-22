@@ -1,5 +1,3 @@
-// Дозаполнить состав кафедры
-// Картинки в партнёрах
 // Адаптивность ПК
 // Мобильная версия
 // Новости
@@ -56,9 +54,6 @@ navToggle.addEventListener('click', () => {
         navToggle.setAttribute('aria-expanded', false);
     }
 });
-
-
-
 
 
 
@@ -187,7 +182,7 @@ new Swiper('.partners_container', {
             slidesPerView: 3,
         },
     },
-
+    centeredSlides: true,
     loop: true,
     autoplay: {
         delay: 1500,
