@@ -8,7 +8,8 @@
 	<link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css">
 
 	<!-- Настройка viewport, запрещаем пользователю ломать верстку масштабированием -->
-	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<meta name="viewport"
+		content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 
 	<!-- Просто заголовок -->
 	<title>ТДиД БГТУ</title>
@@ -19,7 +20,6 @@
 
 	<!-- Контейнер для верхней части сайта. Нужен для поддержки адаптивности и расположения контента -->
 	<div class="container_top">
-
 		<header>
 
 			<!-- Логотип, клик на который возвращает нас на главную страницу -->
@@ -47,13 +47,15 @@
 		</header>
 
 		<!-- Заголовок сайта -->
-		<h1>Кафедра технологии&nbsp;и&nbsp;дизайна<br>изделий&nbsp;из&nbsp;древесины</h1>
+		<h1>Кафедра технологии и дизайна<br>изделий из древесины</h1>
 		<h2>Белорусский государственный технологический университет</h2>
 
 		<!-- Стилизованная кнопка для перехода к основному разделу -->
-		<a data-goto="#spec" class="button" href="#spec">
-			<p>Что мы можем</p>
-		</a>
+		<div class="button_container">
+			<a data-goto="#spec" class="button" href="#spec">
+				<p>Что мы можем</p>
+			</a>
+		</div>
 	</div>
 	<main>
 		<div class="containers_main">
@@ -215,7 +217,8 @@
 					<div class="swiper-container people_container">
 						<div class="swiper-wrapper people_wrapper">
 							<div class="swiper-slide people_slide">
-								<img data-src="images/professors/1_chuikov.jpg" id="size_control" alt="Чуйков С.А." class="swiper-lazy">
+								<img data-src="images/professors/1_chuikov.jpg" id="size_control" alt="Чуйков С.А."
+									class="swiper-lazy">
 								<div class="swiper-lazy-preloader"></div>
 								<div class="people_textcontainer">
 									<h1>Чуйков</h1>
@@ -320,8 +323,7 @@
 								</div>
 							</div>
 							<div class="swiper-slide people_slide">
-								<img data-src="images/professors/14_zarko.jpg" alt="Жарко В.В."
-									class="swiper-lazy">
+								<img data-src="images/professors/14_zarko.jpg" alt="Жарко В.В." class="swiper-lazy">
 								<div class="swiper-lazy-preloader"></div>
 								<div class="people_textcontainer">
 									<h1>Жарко</h1>
