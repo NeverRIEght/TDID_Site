@@ -1,11 +1,7 @@
 // Адаптивность ПК
 // Мобильная версия
-// Новости
 // XML
 // Текстурки на фоне
-// Переверстать контакты
-// Накинуть теней
-// Структура кода
 
 
 
@@ -54,39 +50,34 @@ navToggle.addEventListener('click', () => {
         Nav.setAttribute('data-visible', false);
         navToggle.setAttribute('aria-expanded', false);
     }
+
+    let block= xmlDoc.getElementsByTagName("block");
 });
 
 
+//XML
 
+// function specConstructor() {
+//     if (window.XMLHttpRequest) {
+//         xmlhttp = new XMLHttpRequest();
+//     } else {
+//         xmlhttp = new ActiveXObject("Microsoft.XMLDOM");
+//     }
+//     xmlhttp.open("GET",'/spec.xml',false); // доступ к файлу XML
+//     xmlhttp.send();
+//     xmlDoc = xmlhttp.responseXML;
 
-// var obj = document.getElementByTagName('header');
+//     for(i = 0; i < block.length; i++){
+//         let newElement = document.createElement("div") // создаёт див 
+//         newElement.innerHTML = `<div class="spec_block" style="background-color: #F2F7F7; width: 32%; padding-bottom: 115px; margin-bottom: 55px; z-index: 1;">
+//         <p style="padding-top: 30px; margin-bottom: 5px; color: #037769; font-family: Inter, sans-serif; font-size: 28px;
+//         padding-left: 35px; font-weight: 500; line-height: 155%;">${block[i].getElementsByTagName('blockId')[0].innerHTML}
+//         </p>
+//     </div>`
+//         document.querySelector('.spec_container').appendChild(newElement); // заполняет контейнер XML
+//     }
+// }
 
-// new Swiper('.gallery-swiper', {
-//     //Стрелки
-//     navigation: {
-//         nextEl: '.swiper-button-next',
-//         prevEl: '.swiper-button-prev'
-//     },
-//     //Пагинация
-//     pagination: {
-//         el: '.swiper-pagination',
-//         clickable: true,
-//     },
-//     //Нужный тип курсора
-//     grabCursor: true,
-
-//     //Количество слайдов для показа
-//     slidesPerView: 2,
-
-//     //Отступ между слайдами
-//     spaceBetween: 30,
-
-//     //Выравнивание первого слайда по центру
-//     centeredSlides: true,
-
-//     //Бесконечная прокрутка
-//     loop: true,
-// });
 
 new Swiper('.gallery_container', {
     //Добавление стрелок
@@ -102,17 +93,15 @@ new Swiper('.gallery_container', {
     //Анимация
     speed: 800,
     effect: 'slide',
-    // autoplay: {
-    //     delay: 1500,
-    //     stopOnLastSlide: false,
-    //     disableOnInteraction: true,
-    // },
     //Точки адаптивности
     breakpoints: {
         0: {
             slidesPerView: 1,
         },
-        1800: {
+        1240: {
+            
+        },
+        1720: {
             slidesPerView: 2,
         },
     },
@@ -176,10 +165,7 @@ new Swiper('.partners_container', {
         0: {
             slidesPerView: 1,
         },
-        1030: {
-            slidesPerView: 2,
-        },
-        1600: {
+        1320: {
             slidesPerView: 3,
         },
     },

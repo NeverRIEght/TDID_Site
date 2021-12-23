@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<blocks>
+    <block>
+        <blockId>01</blockId>
+        <txt><p>Проведение лабораторных<br>испытаний</p></txt>
+    </block>
+    <block>
+        <blockId>02</blockId>
+        <txt><p>Проведение лабораторных<br>испытаний</p></txt>
+    </block>
+
+</blocks>

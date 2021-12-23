@@ -3,7 +3,8 @@
 
 <head>
 
-	<!-- Подключение собственного файла стилей, а также доп. файлов: слайдер "Swiper" -->
+	<!-- Подключение собственного файла стилей, а также доп. файлов: нормализатор и слайдер "Swiper" -->
+	<link rel="stylesheet" href="normalize.css">
 	<link rel="stylesheet" href="style.css">
 	<link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css">
 
@@ -88,50 +89,46 @@
 			<div id="spec">
 				<h3>Что мы можем</h3>
 				<div class="hor"></div>
-				<div class="spec_line">
+				<div class="spec_container">
 					<div class="spec_blocks">
 						<p>01</p>
-						<p>Проведение лабораторных<br>испытаний</p>
+						<p>Проведение лабораторных испытаний</p>
 					</div>
 					<div class="spec_blocks">
 						<p>02</p>
-						<p>Разработка технологического<br>процесса производства мебели и<br>столярно-строительных
+						<p>Разработка технологического процесса производства мебели и&nbsp;столярно-строительных
 							изделий</p>
 					</div>
 					<div class="spec_blocks">
 						<p>03</p>
-						<p>Разработка конструкторской<br>документации на изделия<br>из&nbsp;древесины</p>
+						<p>Разработка конструкторской документации на изделия из&nbsp;древесины</p>
 					</div>
-				</div>
-				<div class="spec_line">
 					<div class="spec_blocks">
 						<p>04</p>
-						<p>Разработка мероприятий<br>по&nbsp;модернизации и&nbsp;реконструкции<br>мебельных цехов
-							и&nbsp;цехов<br>механической обработки древесины</p>
+						<p>Разработка мероприятий по&nbsp;модернизации и&nbsp;реконструкции мебельных цехов
+							и&nbsp;цехов механической обработки древесины</p>
 					</div>
 					<div class="spec_blocks">
 						<p>05</p>
-						<p>Разработка мероприятий<br>по&nbsp;модернизации и реконструкции<br>лесопильных цеxов</p>
+						<p>Разработка мероприятий по&nbsp;модернизации и&nbsp;реконструкции лесопильных цеxов</p>
 					</div>
 					<div class="spec_blocks">
 						<p>06</p>
-						<p>Разработка ЗD моделей мебели<br>и столярно-строительных<br>изделий</p>
+						<p>Разработка ЗD моделей мебели и&nbsp;столярно-строительных изделий</p>
 					</div>
-				</div>
-				<div class="spec_line">
 					<div class="spec_blocks">
 						<p>07</p>
-						<p>Разработка и совершенствование<br>режимов сушки пиломатериалов в<br>конвективных
-							камерах<br>периодического действия</p>
+						<p>Разработка и совершенствование режимов сушки пиломатериалов в&nbsp;конвективных
+							камерах периодического действия</p>
 					</div>
 					<div class="spec_blocks">
 						<p>08</p>
-						<p>Разработка планировок<br>древообрабатывающих цехов</p>
+						<p>Разработка планировок древообрабатывающих цехов</p>
 					</div>
 					<div class="spec_blocks">
 						<p>09</p>
-						<p>Расчёт производительности<br>сушильных камер и объёмов<br>затрачиваемой тепловой
-							и<br>электроэнергии</p>
+						<p>Расчёт производительности сушильных камер и&nbsp;объёмов затрачиваемой тепловой
+							и&nbsp;электроэнергии</p>
 					</div>
 				</div>
 			</div>
@@ -139,9 +136,12 @@
 		<div class="containers_main">
 			<div id="contacts_link">
 				<p>Перейти к контактам кафедры</p>
-				<a data-goto="#contacts" class="button" href="#contacts">
-					<p>Контакты</p>
-				</a>
+				<div class="button_container">
+					<a data-goto="#contacts" class="button" href="#contacts">
+						<p>Контакты</p>
+					</a>
+				</div>
+
 			</div>
 		</div>
 		<div class="containers_main">
@@ -206,6 +206,18 @@
 						<div class="swiper-button-prev"></div>
 						<div class="swiper-scrollbar swiper_gallery_scrollbar"></div>
 					</div>
+				</div>
+				<div class="gallery_reserve">
+					<img src="/images/gallery/1_design laboratory.jpg" alt="Лаборатория концептуального дизайна">
+					<img src="/images/gallery/2_blum minipress p.jpg" alt="Blum Minipress P">
+					<img src="/images/gallery/3_card layout belfurniture.jpg" alt="Макет Визитки Белорусская мебель">
+					<img src="/images/gallery/4_factory plan.jpg" alt="План цеха механической обработки древесины">
+					<img src="/images/gallery/5_BSTU style.jpg" alt="Макет фирменного стиля УО БГТУ">
+					<img src="/images/gallery/6_statue belfurniture.jpg" alt="Образец статуэтки Белорусская мебель">
+					<img src="/images/gallery/7_telehany logo.jpg" alt="Логотип фабрики Телеханы">
+					<img src="/images/gallery/8_furniture docks.jpg" alt="Конструкторская документация для мебели">
+					<img src="/images/gallery/9_card layout TDID.jpg" alt="Макет визитки кафедры ТДИД">
+					<img src="/images/gallery/10_multiGloss 268.jpg" alt="Блескомер MultiGloss 268">
 				</div>
 			</div>
 		</div>
@@ -351,13 +363,13 @@
 				</div>
 			</div>
 		</div>
-		<div class="containers_main">
+		<!-- <div class="containers_main">
 			<div id="news">
 				<h3>Новости</h3>
 				<div class="hor"></div>
 
 			</div>
-		</div>
+		</div> -->
 		<div class="containers_main">
 			<div id="place">
 				<h3>Как добраться</h3>
@@ -377,31 +389,41 @@
 					<div class="swiper-container partners_container">
 						<div class="swiper-wrapper partners_wrapper">
 							<div class="swiper-slide partners_slide">
-								<img src="icons/partners/1.png" alt="">
+								<img src="icons/partners/1.png" alt="Речицадрев">
 							</div>
 							<div class="swiper-slide partners_slide">
-								<img src="icons/partners/2.png" alt="">
+								<img src="icons/partners/2.png" alt="Антарион Групп">
 							</div>
 							<div class="swiper-slide partners_slide">
-								<img src="icons/partners/3.png" alt="">
+								<img src="icons/partners/3.png" alt="Беларусьторг">
 							</div>
 							<div class="swiper-slide partners_slide">
-								<img src="icons/partners/4.png" alt="">
+								<img src="icons/partners/4.png" alt="Зов">
 							</div>
 							<div class="swiper-slide partners_slide">
-								<img src="icons/partners/5.png" alt="">
+								<img src="icons/partners/5.png" alt="Coswick">
 							</div>
 							<div class="swiper-slide partners_slide">
-								<img src="icons/partners/6.png" alt="">
+								<img src="icons/partners/6.png" alt="Ивацевичдрев">
 							</div>
 							<div class="swiper-slide partners_slide">
-								<img src="icons/partners/7.png" alt="">
+								<img src="icons/partners/7.png" alt="Пинскдрев">
 							</div>
 							<div class="swiper-slide partners_slide">
-								<img src="icons/partners/8.png" alt="">
+								<img src="icons/partners/8.png" alt="Минскмебель">
 							</div>
 						</div>
 					</div>
+				</div>
+				<div class="partners_reserve">
+					<img src="icons/partners/1.png" alt="Речицадрев">
+					<img src="icons/partners/2.png" alt="Антарион Групп">
+					<img src="icons/partners/3.png" alt="Беларусьторг">
+					<img src="icons/partners/4.png" alt="Зов">
+					<img src="icons/partners/5.png" alt="Coswick">
+					<img src="icons/partners/6.png" alt="Ивацевичдрев">
+					<img src="icons/partners/7.png" alt="Пинскдрев">
+					<img src="icons/partners/8.png" alt="Минскмебель">
 				</div>
 			</div>
 		</div>
@@ -409,23 +431,23 @@
 			<div id="contacts">
 				<h3>Контакты</h3>
 				<div class="hor"></div>
-				<div class="contacts_cont">
-					<div>
+				<div class="contacts">
+					<div class="contacts_block">
 						<h4>E-mail</h4>
 						<a href="mailto:tidid@belstu.by">tidid@belstu.by</a>
 					</div>
-					<div>
+					<div class="contacts_block">
 						<h4>Телефон</h4>
 						<a href="tel:+375173639741">+375 (17) 363-97-41</a><br><a href="tel:+375297761534">+375 (29)
 							776-15-34</a>
 					</div>
-					<div>
+					<div class="contacts_block">
 						<h4>Адрес</h4>
 						<a
-							href="https://www.google.com/maps/place/%D1%83%D0%BB%D0%B8%D1%86%D0%B0+%D0%A1%D0%B2%D0%B5%D1%80%D0%B4%D0%BB%D0%BE%D0%B2%D0%B0+13%D0%B0,+%D0%9C%D0%B8%D0%BD%D1%81%D0%BA/@53.8916883,27.552909,16z/data=!4m5!3m4!1s0x46dbcfdb1106ed6f:0xc844f78697c2a382!8m2!3d53.8914672!4d27.5597861?hl=ru">г.
-							Минск, ул.&nbsp;Свердлова&nbsp;13А,&nbsp;220006</a>
+							href="https://www.google.com/maps/place/%D1%83%D0%BB%D0%B8%D1%86%D0%B0+%D0%A1%D0%B2%D0%B5%D1%80%D0%B4%D0%BB%D0%BE%D0%B2%D0%B0+13%D0%B0,+%D0%9C%D0%B8%D0%BD%D1%81%D0%BA/@53.8916883,27.552909,16z/data=!4m5!3m4!1s0x46dbcfdb1106ed6f:0xc844f78697c2a382!8m2!3d53.8914672!4d27.5597861?hl=ru">
+							г.&nbsp;Минск,&nbsp;ул.&nbsp;Свердлова&nbsp;13А,&nbsp;220006</a>
 					</div>
-					<div>
+					<div class="contacts_block">
 						<h4>Instagram</h4>
 						<a href="https://www.instagram.com/tdid.official/">@tdid.official</a>
 					</div>

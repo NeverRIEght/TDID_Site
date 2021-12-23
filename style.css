@@ -25,7 +25,7 @@ a:hover {
 
 /*-------------------------------------------------- Свойства для кнопок --------------------------------------------------*/
 
-.button {
+.container_top .button {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -37,33 +37,33 @@ a:hover {
     border: 2px solid #037769;
 }
 
-.button:hover {
+.container_top .button:hover {
     border: 2px solid #B7F0E9;
     color: #FFFFFF;
 }
 
-.button_container {
+.container_top .button_container {
     display: flex;
     justify-content: left;
     align-items: center;
 }
 
-@media screen and (max-width: 800px) {
-    .button {
+@media all and (max-width: 800px) {
+    .container_top .button {
         width: 172px;
         height: 42px;
         font-size: 13px;
     }
 }
 
-@media screen and (max-width: 400px) {
-    .button {
+@media all and (max-width: 400px) {
+    .container_top .button {
         width: 100%;
         margin: 3% 0 3%;
         height: 80px;
         font-size: 18px;
     }
-    .button_container {
+    .container_top .button_container {
         justify-content: center;
     }
 }
@@ -212,7 +212,7 @@ ul a {
 	padding-bottom: 130px;
 }
 
-@media screen and (max-width: 1330px) {
+@media all and (max-width: 1330px) {
     .container_top {
         padding: 0 5%;
     }
@@ -272,7 +272,7 @@ ul a {
     }
 }
 
-@media screen and (max-width: 1100px) {
+@media all and (max-width: 1100px) {
     .container_top {
         padding: 2%;
     }
@@ -281,7 +281,7 @@ ul a {
     }
 }
 
-@media screen and (max-width: 800px) {
+@media all and (max-width: 800px) {
     .container_top h1 {
         font-size: 31px;
     }
@@ -293,7 +293,7 @@ ul a {
     }
 }
 
-@media screen and (max-width: 620px) {
+@media all and (max-width: 620px) {
     .primary_navigation {
         inset: 0;
         transform: none;
@@ -307,7 +307,7 @@ ul a {
         font-size: 25px;
     }
 }
-@media screen and (max-width: 400px) {
+@media all and (max-width: 400px) {
     .primary_navigation {
         inset: 0;
         transform: none;
@@ -322,7 +322,7 @@ ul a {
     }
 }
 
-@media handheld and (max-width: 360px) {
+@media all and (max-width: 360px) {
     .primary_navigation {
         position: fixed;
         inset: 0;
@@ -382,7 +382,7 @@ ul a {
 
 /*-------------------------------------------------- Основные разделы --------------------------------------------------*/
 
-@media all and (min-width: 1331px) {
+
     main h3 {
         font-weight: 500;
         font-size: 50px;
@@ -406,9 +406,8 @@ ul a {
     main .containers_main:last-child {
         padding-bottom: 60px;
     }
-}
 
-@media screen and (max-width: 1330px) {
+@media all and (max-width: 1330px) {
     .containers_main {
         padding: auto 5%;
     }
@@ -417,7 +416,7 @@ ul a {
     }
 }
 
-@media screen and (max-width: 1100px) {
+@media all and (max-width: 1100px) {
     .containers_main {
         padding: auto 2%;
     }
@@ -441,6 +440,11 @@ ul a {
     margin-bottom: 60px;
     font-weight: 300;
 }
+@media all and (max-width: 800px) {
+    #about p {
+        font-size: 16px;
+    }
+}
 
 #about div {
     background-color: #252427;
@@ -460,13 +464,14 @@ ul a {
 
 #about .about_blocks {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
 }
 
 #about .about_blocks div {
     background: #252427;
-    /*border-top: 4px solid #037769;*/
     padding-top: 14px;
+    margin-right: 3%;
 }
 
 #about>p {
@@ -479,6 +484,10 @@ ul a {
     margin-bottom: 80px;
     line-height: 142%;
     color: #D2D2D2;
+}
+
+@media all and (max-width: 800px) {
+    
 }
 
 #about img {
@@ -502,16 +511,18 @@ ul a {
     margin: 0;
 }
 
-#spec .spec_line {
+#spec .spec_container {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
-    margin-bottom: 55px;
+    
 }
 
 #spec .spec_blocks {
     background-color: #F2F7F7;
     width: 32%;
-    height: 238px;
+    padding-bottom: 110px;
+    margin-bottom: 55px;
     z-index: 1;
 }
 
@@ -526,11 +537,31 @@ ul a {
 
 #spec .spec_blocks p {
     padding-left: 35px;
+    padding: 8%;
     font-family: Inter, sans-serif;
     font-weight: 500;
     font-size: 16px;
     line-height: 155%;
 }
+@media all and (max-width: 915px) {
+    #spec .spec_container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+    }
+    #spec .spec_blocks {
+        width: 100%;
+    }
+}
+/* @media all and (max-width: 840px) {
+    #spec .spec_blocks {
+        background-color: #FFFFFF;
+        padding-bottom: 10px;
+        margin-bottom: 55px;
+    }
+} */
 
 
 /*-------------------------------------------------- "Перейти к контактам кафедры" --------------------------------------------------*/
@@ -547,6 +578,43 @@ ul a {
     text-align: center;
     padding-top: 75px;
 }
+#contacts_link .button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 205px;
+    height: 50px;
+    background-color: #037769;
+    color: #FFFFFF;
+    text-align: center;
+    border: 2px solid #037769;
+}
+#contacts_link .button:hover {
+    border: 2px solid #B7F0E9;
+    color: #FFFFFF;
+}
+#contacts_link .button_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media all and (max-width: 800px) {
+    #contacts_link .button {
+        width: 172px;
+        height: 42px;
+        font-size: 13px;
+    }
+}
+
+@media all and (max-width: 400px) {
+    #contacts_link .button {
+        width: 100%;
+        margin: 3% 0 3%;
+        height: 80px;
+        font-size: 18px;
+    }
+}
 
 
 /*-------------------------------------------------- "Галерея" --------------------------------------------------*/
@@ -555,6 +623,7 @@ ul a {
     overflow: hidden;
     position: relative;
     display: block;
+    text-align: center;
 }
 
 .containers_gallery_swiper img {
@@ -569,8 +638,25 @@ ul a {
     margin-bottom: 70px;
 }
 
-.containers_gallery_swiper {
-    text-align: center;
+.gallery_reserve {
+    display: none;
+}
+@media all and (max-width: 1240px) {
+    .containers_gallery_swiper {
+        display: none;
+    }
+    .gallery_reserve {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+    }
+    .gallery_reserve img {
+        width: 100%;
+        height: auto;
+        margin-bottom: 50px;
+    }
 }
 
 .containers_gallery_swiper .swiper-slide-active {
@@ -692,51 +778,8 @@ ul a {
 }
 
 
-/*-------------------------------------------------- "Новости" --------------------------------------------------*/
-
-.containers_news_swiper {
-    overflow: hidden;
-    position: relative;
-    display: block;
-}
-
-.containers_news_swiper img {
-    height: 390px;
-    margin: 0;
-}
-
-.containers_news_swiper .news_slide {
-    text-align: center;
-}
-
-.swiper_news_scrollbar-drag {
-    padding: 10px;
-    padding-left: 0;
-    padding-right: 0;
-}
-
-.containers_news_swiper .swiper-scrollbar-drag {
-    background-color: #878787;
-    height: 10px;
-    margin: -5px 0;
-    /*Регулировка высоты ползунка*/
-}
-
-.swiper-button-prev::after,
-.swiper-button-next::after {
-    color: #FFFFFF;
-    font-size: 59px;
-    padding: 15px;
-    background: rgba(0, 0, 0, 0.4);
-}
-
-.swiper-button-prev:hover::after,
-.swiper-button-next:hover::after {
-    font-size: 60px;
-}
-
-
 /*-------------------------------------------------- "Партнеры" --------------------------------------------------*/
+
 
 .containers_partners_swiper {
     overflow: hidden;
@@ -748,6 +791,27 @@ ul a {
     vertical-align: middle;
     height: 60px;
     margin: 0;
+}
+
+.partners_reserve {
+    display: none;
+}
+@media all and (max-width: 420px) {
+    .containers_partners_swiper {
+        display: none;
+    }
+    .partners_reserve {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+    }
+    .partners_reserve img {
+        width: 100%;
+        height: auto;
+        margin-bottom: 50px;
+    }
 }
 
 .containers_partners_swiper .partners_slide {
@@ -770,9 +834,15 @@ ul a {
 
 /*-------------------------------------------------- "Контакты" --------------------------------------------------*/
 
-#contacts .contacts_cont {
+.contacts {
     display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
     justify-content: space-between;
+}
+
+.contacts_block {
+    text-align: left;
 }
 
 #contacts h4 {
@@ -788,17 +858,36 @@ ul a {
 #contacts a {
     color: #FFFFFF;
     margin: 0;
-    padding-left: 20px;
+    padding-left: 25px;
     padding-right: 20px;
     font-weight: 300;
+}
+
+@media all and (max-width: 1100px) {
+    .contacts {
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    .contacts div {
+        height: 180px;
+    }
+    .contacts div:first-child {
+        border-left: 1px solid #525252;
+    }
 }
 
 #contacts a:hover {
     color: #64D8CA;
 }
 
-#contacts .contacts_cont div {
-    border-right: 1px solid #525252;
+.contacts div {
+    border-left: 1px solid #525252;
     height: 180px;
+}
+
+@media all and (min-width: 1101px) {
+    .contacts div:first-child {
+        border: none;
+    }
 }
 
