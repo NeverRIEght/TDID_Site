@@ -114,17 +114,17 @@ main .containers_main:nth-child(8) {
     z-index: auto;
 }
 
-.container_top, main {
+.container_top, main, h1, h2 {
     z-index: 4;
 }
 
 .texture:nth-of-type(1) {
-    top: 42px;
+    top: 342px;
     right: 0;
 }
 
 .texture:nth-of-type(2) {
-    top: 2350px;
+    top: 2600px;
     right: 0;
 }
 
